@@ -47,7 +47,6 @@ function Navbar() {
           <li><Link to="/our-story" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>Our Story</Link></li>
           <li><Link to="/gallery" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>Gallery</Link></li>
           <li><Link to="/itinerary" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>Itinerary</Link></li>
-          <li><Link to="/outfit-moodboard" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>Outfit Moodboard</Link></li>
           <li><Link to="/faq" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>FAQ</Link></li>
         </ul>
       </div>

@@ -7,7 +7,7 @@ import HeroSection from "./HeroSection";
 import OurStory from "./OurStory";
 import Gallery from "./Gallery";
 import Itinerary from "./Itinerary";
-import OutfitMoodboard from "./OutfitMoodboard";
+// import OutfitMoodboard from "./OutfitMoodboard";
 import MusicPlayer from "./MusicPlayer";
 import FAQSection from "./FAQSection";
 
@@ -35,7 +35,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/itinerary" element={<Itinerary />} />
         <Route path="/faq" element={<FAQSection />} />
-        <Route path="/outfit-moodboard" element={<OutfitMoodboard />} />
+       
         
       </Routes>
     </Router>
