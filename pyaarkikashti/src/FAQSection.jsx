@@ -99,7 +99,7 @@ function FAQSection() {
           <div
             key={idx}
             style={{
-              background: "#a07d7dff",
+              background: "#7a7474ff",
               borderRadius: 12,
               marginBottom: 16,
               boxShadow: "0 1px 8px rgba(0,0,0,0.3)", // Corrected boxShadow syntax

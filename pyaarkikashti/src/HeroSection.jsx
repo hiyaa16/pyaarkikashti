@@ -70,19 +70,7 @@ function HeroSection() {
         ))}
       </div>
 
-      {/* Bottom Wave */}
-      <div className="absolute bottom-0 w-full overflow-hidden leading-none">
-        <svg
-          viewBox="0 0 500 150"
-          preserveAspectRatio="none"
-          className="w-full h-20 sm:h-32"
-        >
-          <path
-            d="M-10.59,118.77 C150.00,150.00 349.25,0.00 510.59,120.77 L500.00,0.00 L0.00,0.00 Z"
-            className="fill-gray-300"
-          ></path>
-        </svg>
-      </div>
+      
     </div>
   );
 }

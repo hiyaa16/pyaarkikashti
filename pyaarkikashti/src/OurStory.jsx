@@ -65,7 +65,7 @@ function OurStory() {
               >
                 “I saw her across the bar and I couldn’t look away until I had the guts to talk to her.”
                 <footer>
-                  <span className="block mt-4 text-s text-gray-600">— Vipul</span>
+                  <span className="block mt-4 text-s text-gray-600">— Karan</span>
                 </footer>
               </blockquote>
 
@@ -76,7 +76,7 @@ function OurStory() {
                 “We caught eye contact at one point and I was mesmerized by that addicting smile of his.”
                 <footer>
                   <span className="block mt-4 text-s text-gray-600 text-left ">
-                    — Patty
+                    — Shrishti
                   </span>
                 </footer>
               </blockquote>
@@ -88,7 +88,7 @@ function OurStory() {
               >
                 “I saw her across the bar and I couldn’t look away until I had the guts to talk to her.”
                 <footer>
-                  <span className="block mt-4 text-s text-gray-600">— Vipul</span>
+                  <span className="block mt-4 text-s text-gray-600">— Karan</span>
                 </footer>
               </blockquote>
 
@@ -99,7 +99,7 @@ function OurStory() {
                 “We caught eye contact at one point and I was mesmerized by that addicting smile of his.”
                 <footer>
                   <span className="block mt-4 text-s text-gray-600 text-left ">
-                    — Patty
+                    — Shrishti
                   </span>
                 </footer>
               </blockquote>
