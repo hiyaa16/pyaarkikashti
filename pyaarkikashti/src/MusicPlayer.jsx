@@ -78,7 +78,7 @@ function MusicPlayer() {
       <button
         onClick={toggleMusic}
         // Tailwind classes for visibility and style
-        className="fixed bottom-4 right-4 text-white text-2xl z-50 bg-gray-500 p-3 rounded-full shadow-xl cursor-pointer hover:scale-110 transition"
+        className="fixed bottom-4 right-4 text-white text-2xl z-50  p-3 rounded-full shadow-xl cursor-pointer hover:scale-110 transition"
       >
         {isPlaying ? "🔊" : "🔇"}
       </button>

@@ -1,0 +1,18 @@
+/* src/index.css (or wherever your main CSS file is) */
+
+/* Apply the correct height to the root element */
+html, body, #root {
+  height: 100%;
+}
+
+/* Fix for mobile viewport height issue (iPhone/Safari) */
+.h-mobile-screen {
+  /* Dynamic Viewport Height (Best for new browsers) */
+  height: 100dvh;
+  
+  /* Small Viewport Height (Good fallback) */
+  min-height: 100svh; 
+  
+  /* Fallback for older browsers (may still cause white space) */
+  height: 100vh;
+}

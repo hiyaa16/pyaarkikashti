@@ -16,7 +16,7 @@ function HeroSection() {
   }, [images.length]);
 
   return (
-    <div className="relative w-full h-[90vh] sm:h-screen overflow-hidden bg-black">
+    <div className="relative w-full h-mobile-screen overflow-hidden bg-black">
       {/* Background Images */}
       {images.map((img, i) => (
         <img

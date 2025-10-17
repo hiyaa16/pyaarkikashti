@@ -67,7 +67,7 @@ function Itinerary() {
     >
       <div className="relative z-10 text-white text-center w-full max-w-6xl px-2 sm:px-4 flex flex-col h-full">
         <h1
-          className="mt-20 sm:mt-20 md:mt-24 text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 drop-shadow-lg leading-tight px-2"
+          className="mt-32 sm:mt-24 md:mt-24 text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 drop-shadow-lg leading-tight px-2"
           style={{ fontFamily: 'serif' }}
         >
           OUR WEDDING ITINERARY
