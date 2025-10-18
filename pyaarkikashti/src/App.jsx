@@ -4,10 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import OurStory from "./OurStory";
-import Gallery from "./Gallery"; // single combined gallery component
+import Gallery from "./Gallery";
 import Itinerary from "./Itinerary";
 import MusicPlayer from "./MusicPlayer";
 import FAQSection from "./FAQSection";
+import CloudinaryUpload from "./CloudinaryUpload"; // <-- Import here
 
 function Home() {
   useEffect(() => {
@@ -28,9 +29,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/our-story" element={<OurStory />} />
-        <Route path="/gallery" element={<Gallery />} /> {/* Use single Gallery.jsx */}
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/itinerary" element={<Itinerary />} />
         <Route path="/faq" element={<FAQSection />} />
+        <Route path="/upload" element={<CloudinaryUpload />} /> {/* New Route */}
       </Routes>
     </Router>
   );
