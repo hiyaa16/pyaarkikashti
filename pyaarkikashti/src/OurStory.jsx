@@ -1,152 +1,104 @@
 import React, { useState } from "react";
-import storyImg from "./assets/image6.jpg"; // Your main story image
-import image7 from "./assets/image3.jpg"; // UNCOMMENTED
-import image8 from "./assets/image.jpg"; // UNCOMMENTED
-import image9 from "./assets/image9.jpg"; // UNCOMMENTED
-import bgImage from "./assets/bgw.jpg"; // <-- 1. IMPORT YOUR BACKGROUND IMAGE HERE!
+import { motion } from "framer-motion";
+import Typewriter from "./Typewriter"; // Import the Typewriter component
 
-// NOTE: I've uncommented your image imports so the code runs without errors.
-// Replace these with your actual photo imports or URLs
-const photos = [image7, image8, image9];
+// Import images from assets folder
+import collegeImg from "./assets/college.jpg";
+import mcdonaldsImg from "./assets/mcdonalds.jpg";
+import mountainsImg from "./assets/mountains.jpg";
+import proposalImg from "./assets/proposal.jpg";
+import foreverImg from "./assets/forever.jpg";
+
+// Import background image
+import backgroundImg from "./assets/bgw2.jpg";
+
+const storySections = [
+  {
+    title: "College Days 🎓",
+    image: collegeImg,
+    text: "They met during their first year of college — two sectors apart but somehow side by side. What started as a casual introduction soon turned into endless laughter and friendship.",
+  },
+  {
+    title: "The First Date 🍦",
+    image: mcdonaldsImg,
+    text: "Their first official date wasn’t fancy — just a McDonald’s brownie with ice cream. Simple, sweet, and unforgettable — the beginning of something real.",
+  },
+  {
+    title: "Mountain Escapes ⛰️",
+    image: mountainsImg,
+    text: "She’s always been drawn to the mountains. Over the years, those peaceful drives became their special tradition — where time slowed and love felt effortless.",
+  },
+  {
+    title: "The Proposal💍",
+    image: proposalImg,
+    text: "In a storybook twist, just three months after becoming close friends, he surprised her with a rain-soaked proposal — balloons bursting from the car, laughter echoing in the drizzle.",
+  },
+  {
+    title: "Eight Years of Forever ❤️",
+    image: foreverImg,
+    text: "Eight years later, their journey is a celebration of friendship, adventure, and love found in the little everyday moments that make life beautiful.",
+  },
+];
 
 function OurStory() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Navigation handlers for photo carousel on small screens
-  const prevPhoto = () => {
-    setCurrentIndex((prev) => (prev === 0 ? photos.length - 1 : prev - 1));
-  };
-
-  const nextPhoto = () => {
-    setCurrentIndex((prev) => (prev === photos.length - 1 ? 0 : prev + 1));
-  };
+  const [visibleIndexes, setVisibleIndexes] = useState(Array(storySections.length).fill(false));
 
   return (
-    // 2. APPLY BACKGROUND IMAGE AND STYLES TO THE OUTER DIV
     <div
-      className="min-h-screen flex flex-col items-center justify-center py-4 relative"
+      className="py-20 px-4"
       style={{
-        // Set the background image
-        backgroundImage: `url(${bgImage})`,
-        // Make the background cover the entire element
-        backgroundSize: 'cover',
-        // Fix the background so it doesn't scroll with content
-        backgroundAttachment: 'fixed', 
-        // Center the background image
-        backgroundPosition: 'center', 
-        // If you still want a slight background color overlay (optional)
-        backgroundColor: '#f4f4f4',
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
-        
+      <h2 className="text-4xl font-bold text-center mb-6 mt-6 text-white drop-shadow-lg">
+        Our Story
+      </h2>
 
-        {/* 4. WRAP ALL CONTENT IN A Z-INDEXED DIV TO BE ON TOP OF THE OVERLAY */}
-        <div className="relative z-10 w-full flex flex-col items-center justify-center">
-            
-            <h1
-              style={{ fontFamily: "'Bodoni Moda', serif" }}
-              className="text-center text-2xl sm:text-2xl md:text-5xl mt-24 font-thin tracking-normal"
-            >
-              How it all began
-            </h1>
+      <p className="text-center mt-16 mb-16 italic font-bold text-white drop-shadow-md text-2xl">
+        A little tale filled with laughter, love, and unforgettable moments — here’s how it all began...
+      </p>
 
-            <img
-              src={storyImg}
-              alt="Our Story"
-              className="w-full mt-14 px-10 md:max-w-7xl sm:max-w-sm"
-            />
-
-            {/* Quotes Section - Make sure text is dark/clear */}
-            <div className="w-full flex flex-col gap-16 mt-12 px-4 sm:px-6 lg:px-24">
-              {/* NOTE: I noticed you had two identical quote blocks. I'll keep them as is. */}
-              <blockquote
-                className="max-w-2xl text-left text-lg md:text-2xl font-normal md:mt-10 md:ml-24 text-black"
-                style={{ fontFamily: "'Bodoni Moda', serif" }}
-              >
-                “I saw her across the bar and I couldn’t look away until I had the guts to talk to her.”
-                <footer>
-                  <span className="block mt-4 text-s text-gray-600">— Karan</span>
-                </footer>
-              </blockquote>
-
-              <blockquote
-                className="max-w-3xl mx-auto text-center text-lg md:text-2xl font-normal md:mr-24 text-black"
-                style={{ textAlign: "left", fontFamily: "'Bodoni Moda', serif" }}
-              >
-                “We caught eye contact at one point and I was mesmerized by that addicting smile of his.”
-                <footer>
-                  <span className="block mt-4 text-s text-gray-600 text-left ">
-                    — Shrishti
-                  </span>
-                </footer>
-              </blockquote>
-            </div>
-            <div className="w-full flex flex-col gap-16 mt-12 px-4 sm:px-6 lg:px-24">
-              <blockquote
-                className="max-w-2xl text-left text-lg md:text-2xl font-normal md:mt-20 md:ml-24 text-black"
-                style={{ fontFamily: "'Bodoni Moda', serif" }}
-              >
-                “I saw her across the bar and I couldn’t look away until I had the guts to talk to her.”
-                <footer>
-                  <span className="block mt-4 text-s text-gray-600">— Karan</span>
-                </footer>
-              </blockquote>
-
-              <blockquote
-                className="max-w-3xl mx-auto text-center text-lg md:text-2xl font-normal md:mr-24 text-black"
-                style={{ textAlign: "left", fontFamily: "'Bodoni Moda', serif" }}
-              >
-                “We caught eye contact at one point and I was mesmerized by that addicting smile of his.”
-                <footer>
-                  <span className="block mt-4 text-s text-gray-600 text-left ">
-                    — Shrishti
-                  </span>
-                </footer>
-              </blockquote>
+      <div className="flex flex-col items-center space-y-20">
+        {storySections.map((section, index) => (
+          <motion.div
+            key={index}
+            className="w-full max-w-4xl rounded-2xl overflow-hidden"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            viewport={{ once: true }}
+            onViewportEnter={() => {
+              if (!visibleIndexes[index]) {
+                const arr = [...visibleIndexes];
+                arr[index] = true;
+                setVisibleIndexes(arr);
+              }
+            }}
+          >
+            <div className="w-full h-[600px] overflow-hidden flex justify-center items-center mb-8">
+              <img
+                src={section.image}
+                alt={section.title}
+                className="max-h-full max-w-full object-contain transition-transform duration-300 hover:scale-105"
+              />
             </div>
 
-            {/* Photos Carousel Section */}
-            <div className="w-full mt-12 px-4 sm:px-6 lg:px-24">
-              {/* Navigation arrows for small screens */}
-              <div className="flex items-center justify-between mb-4 sm:hidden">
-                <button
-                  onClick={prevPhoto}
-                  aria-label="Previous photo"
-                  className="px-3 py-1 border rounded bg-white text-black" // Added styling for visibility
-                >
-                  &lt;
-                </button>
-                <button
-                  onClick={nextPhoto}
-                  aria-label="Next photo"
-                  className="px-3 py-1 border rounded bg-white text-black" // Added styling for visibility
-                >
-                  &gt;
-                </button>
-              </div>
-
-              {/* Show 3 photos side-by-side on medium and larger screens */}
-              <div className="hidden sm:flex flex-wrap justify-center gap-6">
-                {photos.map((src, idx) => (
-                  <img
-                    key={idx}
-                    src={src}
-                    alt={`Photo ${idx + 1}`}
-                    className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-contain rounded-md md:m-4 md:mt-48 shadow-lg" // Added shadow for effect
-                  />
-                ))}
-              </div>
-
-              {/* Show single photo on small screens with carousel */}
-              <div className="sm:hidden flex justify-center">
-                <img
-                  src={photos[currentIndex]}
-                  alt={`Photo ${currentIndex + 1}`}
-                  className="w-64 border border-gray-300 rounded-md shadow-lg" // Added shadow for effect
-                />
-              </div>
+            <div className="p-6 text-center rounded-lg mb-16">
+              <h3 className="text-2xl font-semibold text-white mb-3">{section.title}</h3>
+              <p className="text-2xl italic leading-relaxed">
+                <Typewriter text={section.text} speed={30} inView={visibleIndexes[index]} />
+              </p>
             </div>
-        </div>
+          </motion.div>
+        ))}
+      </div>
+
+      <p className="text-center mt-16 italic text-pink-600 drop-shadow-lg text-xl">
+        “From that rainy day to this wedding day — their story continues with love and laughter.”
+      </p>
     </div>
   );
 }
