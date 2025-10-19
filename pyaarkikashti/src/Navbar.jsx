@@ -21,18 +21,44 @@ function Navbar() {
           #PyaarKiKashti
         </div>
 
-        <button className="sm:hidden text-white p-2 focus:outline-none" onClick={toggleMenu} aria-label="Toggle menu">
+        {/* Mobile Menu Button */}
+        <button
+          className="sm:hidden text-white p-2 focus:outline-none"
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
           {menuOpen ? (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
           ) : (
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
             </svg>
           )}
         </button>
 
+        {/* Navigation Links */}
         <ul
           className={`
             flex flex-col sm:flex-row gap-6 sm:gap-9 font-serif
@@ -43,11 +69,62 @@ function Navbar() {
             ${menuOpen ? "" : "hidden sm:flex"}
           `}
         >
-          <li><Link to="/" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>Home</Link></li>
-          <li><Link to="/our-story" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>Our Story</Link></li>
-          <li><Link to="/gallery" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>Gallery</Link></li>
-          <li><Link to="/itinerary" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>Itinerary</Link></li>
-          <li><Link to="/faq" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>FAQ</Link></li>
+          <li>
+            <Link
+              to="/"
+              className={menuOpen ? mobileLinkColor : desktopTextColor}
+              onClick={() => setMenuOpen(false)}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/our-story"
+              className={menuOpen ? mobileLinkColor : desktopTextColor}
+              onClick={() => setMenuOpen(false)}
+            >
+              Our Story
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/gallery"
+              className={menuOpen ? mobileLinkColor : desktopTextColor}
+              onClick={() => setMenuOpen(false)}
+            >
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/itinerary"
+              className={menuOpen ? mobileLinkColor : desktopTextColor}
+              onClick={() => setMenuOpen(false)}
+            >
+              Itinerary
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/faq"
+              className={menuOpen ? mobileLinkColor : desktopTextColor}
+              onClick={() => setMenuOpen(false)}
+            >
+              FAQ
+            </Link>
+          </li>
+
+          {/* ✅ RSVP Table (New link) */}
+          <li>
+            <Link
+              to="/rsvp-table"
+              className={menuOpen ? mobileLinkColor : desktopTextColor}
+              onClick={() => setMenuOpen(false)}
+            >
+              RSVP Table
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>
