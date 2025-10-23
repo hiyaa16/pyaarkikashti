@@ -47,7 +47,7 @@ function HeroSection() {
           </div>
 
           <div className="text-2xl sm:text-3xl md:text-4xl italic font-serif mx-2 sm:mx-6 opacity-100 ">
-           Shrishti & Karan
+           Srishti & Karan
           </div>
 
           <div className="sm:border-l-2 sm:border-white pl-0 sm:pl-8 text-sm sm:text-base md:text-lg opacity-90 font-BOLD text-center sm:text-right">

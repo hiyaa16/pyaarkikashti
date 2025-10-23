@@ -6,17 +6,17 @@ const faqData = [
   {
     question: "Are accommodations provided for the wedding?",
     answer:
-      "Yes! All guests will have accommodations booked at the venue for two nights — February 20th and 21st.",
+      "Yes! All guests will have accommodations booked at the venue for two nights — 22nd and 23rd November.",
   },
   {
     question: "When should I arrive at the venue?",
     answer:
-      "Guests should plan to arrive by the February 20th to settle in before the afternoon's festivities.",
+      "Guests should plan to arrive by the november 22nd to settle in before the afternoon's festivities.",
   },
   {
     question: "Is transportation provided to and from the airport?",
     answer:
-      "Yes, we are arranging transportation for all guests to and from Jodhpur Airport (JDH). Please share your flight details via the form present in this site.",
+      "Yes, we are arranging transportation for all guests. Please share your flight details via the form present in this site.",
   },
   {
     question: "Do you need my flight information?",
@@ -26,12 +26,17 @@ const faqData = [
   {
     question: "Is there a dress code?",
     answer:
-      "Yes! We do have a dress code 😉. Don’t worry, our Wedding Wardrobe Planner is right here on the website that will help you pick the perfect outfit for the celebration!",
+      "Yes! We do have a dress code . Don’t worry, ideas for outfits are right here on the website that will help you pick the perfect outfit for the celebration!",
   },
   {
-    question: "What can I do while I'm in Jodhpur?",
+    question: "what essentials should i carry for dune wedding?",
     answer:
-      "Jodhpur is known as the 'Blue City' with many attractions! You can visit Mehrangarh Fort, Jaswant Thada, Umaid Bhawan Palace, and explore the bustling markets.",
+      "For a dune wedding, carry sunglasses,capand sunscreen for the day, pair of comfortable shoes for walking on sand, and warm clothes/cover-ups for the chilly nights.",
+  },
+  {
+    question: "what will be the weather conditions in late november?",
+    answer:
+      "Most likely at day it will be 30°C and at night it can go down to 10°C. Please pack accordingly.",
   },
 ];
 

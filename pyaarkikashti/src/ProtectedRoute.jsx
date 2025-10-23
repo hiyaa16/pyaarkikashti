@@ -2,16 +2,13 @@ import React, { useState } from "react";
 import bgImage from "./assets/bgw2.jpg"; // <-- local image import
 
 function ProtectedRoute({ children }) {
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    localStorage.getItem("rsvpAuth") === "true"
-  );
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState("");
   const correctPassword = "admin123"; // 🔒 change this
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (password === correctPassword) {
-      localStorage.setItem("rsvpAuth", "true");
       setIsAuthenticated(true);
     } else {
       alert("Incorrect password!");
