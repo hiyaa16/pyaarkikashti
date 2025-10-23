@@ -1,19 +1,15 @@
 import React, { useState } from "react";
-import bgImage from "./assets/bgw.jpg";
-import carouselImage1 from "./assets/Wardrobe Planner/1.png";
-import carouselImage2 from "./assets/Wardrobe Planner/2.png";
-import carouselImage3 from "./assets/Wardrobe Planner/3.png";
-import carouselImage4 from "./assets/Wardrobe Planner/4.png";
-import carouselImage5 from "./assets/Wardrobe Planner/5.png";
-import carouselImage6 from "./assets/Wardrobe Planner/6.png";
+import bgImage from "./assets/bgw2.jpg";
+import carouselImage1 from "./assets/mehndi.jpeg";
+import carouselImage2 from "./assets/sangeet.jpeg";
+import carouselImage3 from "./assets/haldi.jpeg";
+import carouselImage4 from "./assets/phere.jpeg";
 
 const carouselImages = [
   { src: carouselImage1 },
   { src: carouselImage2 },
   { src: carouselImage3 },
   { src: carouselImage4 },
-  { src: carouselImage5 },
-  { src: carouselImage6 },
 ];
 
 function OutfitMoodboard() {
@@ -45,19 +41,14 @@ function OutfitMoodboard() {
       className="relative w-full min-h-screen bg-cover bg-center flex flex-col items-center overflow-hidden"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      {/* <div className="absolute inset-0 bg-black opacity-50 z-0"></div> */}
-
       <div className="relative z-10 text-white text-center w-full max-w-6xl px-2 sm:px-4 flex flex-col h-full">
         <h1
-  className="mt-16 sm:mt-12 md:mt-24 text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 drop-shadow-lg leading-tight px-2"
-  style={{ fontFamily: 'serif' }}
->
-  OUR WEDDING WARDROBE PLANNER
-</h1>
+          className="mt-20 sm:mt-20 md:mt-24 text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-20 drop-shadow-lg leading-tight px-2"
+          style={{ fontFamily: 'serif' }}
+        >
+          OUR WEDDING WARDROBE PLANNER
+        </h1>
 
-
-
-        {/* ↓ Carousel moved slightly lower with mt-10 */}
         <div className="relative w-full mx-auto flex-grow flex items-center justify-center min-h-[400px] sm:min-h-[500px] md:min-h-[600px] mt-10 sm:mt-16 md:mt-24">
           {/* Left Arrow */}
           <button
@@ -105,23 +96,19 @@ function OutfitMoodboard() {
 
           {carouselImages.map((item, index) => {
             const position = getRelativePosition(index);
-            const isCenter = position === 0;
-            const isLeft = position === -1;
-            const isRight = position === 1;
-
             let transformStyle = "";
             let zIndex = 5;
             let opacity = 0;
 
-            if (isCenter) {
+            if (position === 0) {
               transformStyle = `translateX(0%) scale(${CENTER_SCALE})`;
               zIndex = 20;
               opacity = 1;
-            } else if (isLeft) {
+            } else if (position === -1) {
               transformStyle = `translateX(-${SIDE_OFFSET}%) scale(${SIDE_SCALE})`;
               zIndex = 10;
               opacity = 0.8;
-            } else if (isRight) {
+            } else if (position === 1) {
               transformStyle = `translateX(${SIDE_OFFSET}%) scale(${SIDE_SCALE})`;
               zIndex = 10;
               opacity = 0.8;
@@ -138,15 +125,15 @@ function OutfitMoodboard() {
             return (
               <div
                 key={index}
-                className="absolute h-[50%] sm:h-[65%] md:h-[80%] overflow-hidden cursor-pointer"
+                className={`absolute overflow-hidden cursor-pointer w-full h-[75vw] sm:w-[34%] sm:h-[65%] md:h-[80%] flex justify-center items-center`}
                 style={{
-                  width: CARD_BASE_WIDTH,
                   zIndex,
                   transition: "all 800ms linear",
                   transform: `translateX(-50%) ${transformStyle}`,
                   opacity,
                   left: "50%",
                   backgroundColor: "transparent",
+                  top: 0,
                 }}
                 onClick={() => setCurrentSlide(index)}
               >
@@ -154,21 +141,23 @@ function OutfitMoodboard() {
                   src={item.src}
                   alt={`Outfit Moodboard ${index + 1}`}
                   className="w-full h-full object-contain"
+                  style={{
+                    maxHeight: "100%",
+                    maxWidth: "100%",
+                  }}
                 />
               </div>
             );
           })}
         </div>
 
-        {/* Dots */}
+        {/* Dots indicator */}
         <div className="flex justify-center mb-6 mt-4 space-x-1 sm:space-x-2">
           {carouselImages.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors duration-300 ${
-                index === currentSlide ? "bg-white" : "bg-gray-400"
-              }`}
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors duration-300 ${index === currentSlide ? "bg-white" : "bg-gray-400"}`}
               aria-label={`Go to slide ${index + 1}`}
             ></button>
           ))}

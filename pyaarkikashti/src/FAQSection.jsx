@@ -29,12 +29,12 @@ const faqData = [
       "Yes! We do have a dress code . Don’t worry, ideas for outfits are right here on the website that will help you pick the perfect outfit for the celebration!",
   },
   {
-    question: "what essentials should i carry for dune wedding?",
+    question: "what essentials should i carry for wedding?",
     answer:
-      "For a dune wedding, carry sunglasses,capand sunscreen for the day, pair of comfortable shoes for walking on sand, and warm clothes/cover-ups for the chilly nights.",
+      "For day functions carry sunglasses,cap and sunscreen , pair of comfortable shoes for dune's function, and warm clothes/cover-ups for the chilly nights.",
   },
   {
-    question: "what will be the weather conditions in late november?",
+    question: "what will be the weather conditions in november?",
     answer:
       "Most likely at day it will be 30°C and at night it can go down to 10°C. Please pack accordingly.",
   },

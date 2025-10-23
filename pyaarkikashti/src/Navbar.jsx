@@ -37,7 +37,7 @@ function Navbar() {
       <div className="mx-4 sm:mx-10 flex justify-between items-center py-4">
         {/* Logo/Title */}
         <div className={`text-2xl font-bold font-serif ${desktopTextColor}`}>
-          #PattypulledVipul
+          #PyaarKiKashti
         </div>
 
         {/* Hamburger menu button - visible on small screens */}
@@ -69,7 +69,7 @@ function Navbar() {
           <li><Link to="/gallery" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>Gallery</Link></li>
           <li><Link to="/itinerary" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>Itinerary</Link></li>
           <li><a href="/#rsvp" onClick={scrollToRSVP} className={menuOpen ? mobileLinkColor : desktopTextColor}>RSVP</a></li>
-          <li><Link to="/outfit-moodboard" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>Outfit Moodboard</Link></li>
+          <li><Link to="/OutfitMoodboard" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>Outfit Moodboard</Link></li>
           <li><Link to="/faq" className={menuOpen ? mobileLinkColor : desktopTextColor} onClick={() => setMenuOpen(false)}>FAQ</Link></li>
           {/* NEW RSVP Table Public Link */}
           <li>

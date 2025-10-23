@@ -12,6 +12,7 @@ import FAQSection from "./FAQSection";
 import RSVPTable from "./RSVPTable"; // RSVP Data Table (Admin View)
 import CloudinaryUpload from "./CloudinaryUpload"; // Optional upload route
 import ProtectedRoute from "./ProtectedRoute"; // add this import
+import OutfitMoodboard from "./OutfitMoodboard";
 
 
 function Home() {
@@ -40,6 +41,7 @@ function App() {
         <Route path="/faq" element={<FAQSection />} />
         <Route path="/rsvp-table" element={<ProtectedRoute><RSVPTable /></ProtectedRoute>} />
         <Route path="/upload" element={<CloudinaryUpload />} /> {/* Optional Route */}
+        <Route path="/outfitMoodboard" element={<OutfitMoodboard />} />
       </Routes>
     </Router>
   );
