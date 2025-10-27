@@ -16,6 +16,9 @@ const STATIC_IMAGES = [
   { id: 'static-4', url: wedding4 }
 ];
 
+// Placeholder image URL for broken/missing images
+const placeholderImage = "https://via.placeholder.com/400x225?text=Photo+not+found";
+
 export default function GalleryWithUpload() {
   const [photos, setPhotos] = useState([]);
   const [file, setFile] = useState(null);
@@ -42,7 +45,6 @@ export default function GalleryWithUpload() {
     }
   };
 
-  // Cloudinary upload logic
   const handleUpload = async () => {
     if (!file) {
       setMessage('Please select a file to upload.');
@@ -157,6 +159,7 @@ export default function GalleryWithUpload() {
                   alt={photo.caption || 'Wedding Photo'} 
                   className="w-full h-36 sm:h-44 md:h-52 object-cover cursor-pointer transition-transform duration-150 hover:scale-105"
                   onClick={() => { setSelectedImg(photo.url); setShowModal(true); }}
+                  onError={e => { e.target.onerror = null; e.target.src = placeholderImage; }}
                 />
                 {photo.caption && (
                   <div className="p-2 text-purple-700 font-semibold text-center text-xs sm:text-sm">

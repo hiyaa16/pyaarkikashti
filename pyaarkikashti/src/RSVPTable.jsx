@@ -23,7 +23,7 @@ function RSVPTable() {
 
   return (
     <div className="p-4 overflow-auto bg-gray-200">
-      <h2 className="text-2xl font-bold mb-6 md:mt-20 text-center text-white">RSVP List</h2>
+      <h2 className="text-2xl font-bold mb-6 mt-20 text-center text-white">RSVP List</h2>
       <table className="min-w-full border-collapse border border-gray-300 bg-pink-100">
         <thead>
           <tr className="bg-gray-100">
