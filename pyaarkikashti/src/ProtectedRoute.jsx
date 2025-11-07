@@ -4,7 +4,7 @@ import bgImage from "./assets/bgw2.jpg"; // <-- local image import
 function ProtectedRoute({ children }) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState("");
-  const correctPassword = "admin123"; // 🔒 change this
+  const correctPassword = "karan@54321"; // 🔒 change this
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -35,8 +35,8 @@ function HeroSection() {
 
       {/* Text Content */}
       <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center text-white px-4 sm:px-10 mt-48">
-        <h1 className="text-2xl sm:text-4xl md:text-6xl font-extrabold tracking-[.10em] mb-5">
-          SAVE THE DATE
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-[.10em] mb-5">
+          WEDDING CELEBRATIONS
         </h1>
 
         <div className="flex flex-col sm:flex-row items-center justify-center w-full gap-3 sm:gap-6">
